@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Webseminar — Faculty of Trading</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap');
+
+    :root{
+      --blue:#00B7FF;
+      --purple:#7B61FF;
+      --bg1:#020617;
+      --bg2:#0F172A;
+      --glass:rgba(255,255,255,0.08);
+      --muted:#94A3B8;
+      --white:#F8FAFC;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:"Tajawal",sans-serif;
+      background:radial-gradient(circle at top,var(--bg2),var(--bg1));
+      color:var(--white);
+      overflow-x:hidden;
+    }
+    a{text-decoration:none;color:inherit}
+    h1,h2,h3,h4{font-weight:800}
+    .container{max-width:1150px;margin:auto;padding:28px}
+
+    /* Header */
+    header{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:12px 0;
+    }
+    .brand{display:flex;align-items:center;gap:10px}
+    .logo{
+      width:64px;height:64px;border-radius:20px;
+      background:linear-gradient(135deg,var(--blue),var(--purple));
+      display:flex;align-items:center;justify-content:center;
+      font-size:26px;font-weight:900;box-shadow:0 0 25px var(--blue);
+    }
+    nav{display:flex;gap:14px}
+    .btn{
+      background:linear-gradient(90deg,var(--blue),var(--purple));
+      color:white;padding:10px 18px;border-radius:10px;
+      font-weight:700;transition:0.3s;
+    }
+    .btn:hover{filter:brightness(1.2)}
+    .ghost{
+      background:transparent;color:var(--muted);
+      padding:10px 14px;border-radius:8px;transition:0.3s;
+    }
+    .ghost:hover{background:var(--glass);color:white}
+    .lang-toggle{display:flex;gap:8px;align-items:center}
+
+    /* Hero */
+    .hero{
+      display:grid;grid-template-columns:1fr 380px;gap:24px;
+      margin-top:40px;align-items:center;
+    }
+    .card{
+      background:var(--glass);backdrop-filter:blur(12px);
+      border-radius:16px;padding:24px;
+      border:1px solid rgba(255,255,255,0.1);
+      box-shadow:0 8px 25px rgba(0,0,0,0.4);
+    }
+    .card h2{color:white;margin-bottom:8px}
+    .lead{color:var(--muted);margin-bottom:12px}
+
+    /* Markets */
+    .section{margin-top:60px}
+    .markets{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+      gap:14px;margin-top:16px;
+    }
+    .markets .box{
+      background:linear-gradient(135deg,#1E293B,#0F172A);
+      border-radius:10px;padding:14px;text-align:center;
+      font-weight:700;transition:0.3s;cursor:pointer;
+    }
+    .markets .box:hover{
+      background:linear-gradient(135deg,var(--blue),var(--purple));
+      transform:translateY(-4px);
+    }
+
+    /* Programs */
+    .faculty-grid{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:16px;margin-top:16px;
+    }
+
+    /* Lab */
+    ul{list-style:none;margin-top:8px}
+    ul li::before{
+      content:"• ";color:var(--blue);font-weight:900;
+    }
+
+    footer{
+      margin-top:60px;
+      border-top:1px solid rgba(255,255,255,0.1);
+      padding-top:16px;
+      display:flex;flex-wrap:wrap;justify-content:space-between;
+      color:var(--muted);font-size:14px;
+    }
+
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr}
+      nav{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">WS</div>
+        <div>
+          <h1>Webseminar — Faculty of Trading</h1>
+          <p class="lead">الجيل القادم من تعليم التداول في جميع الأسواق المالية</p>
+        </div>
+      </div>
+      <div class="lang-toggle">
+        <a class="ghost" href="#">EN</a>
+        <a class="btn" href="#enroll">انضم الآن</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <h2>تعليم تداول المستقبل يبدأ هنا</h2>
+        <p class="lead">منصة تعليمية متكاملة تغطي الفوركس، الأسهم، السلع، العملات الرقمية، الطاقة، والمشتقات — مع محاكاة حقيقية وشهادات احترافية معتمدة.</p>
+        <div style="display:flex;gap:10px;margin-top:10px">
+          <a class="btn" href="#programs">ابدأ التعلم</a>
+          <a class="ghost" href="#lab">ادخل المختبر</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>كلية رقمية لتأهيل المتداولين</h3>
+        <p class="lead">من المبتدئ إلى المحترف، عبر برامج تحليل فني، أساسي، وبرمجة خوارزمية.</p>
+        <div class="markets">
+          <div class="box">فوركس</div>
+          <div class="box">أسهم</div>
+          <div class="box">سلع</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="markets" class="section">
+      <h2>الأسواق التي نغطيها</h2>
+      <p class="lead">كل أدوات التداول في مكان واحد.</p>
+      <div class="markets">
+        <div class="box">فوركس (FX)</div>
+        <div class="box">أسهم</div>
+        <div class="box">مؤشرات</div>
+        <div class="box">سلع وطاقة</div>
+        <div class="box">عملات رقمية</div>
+        <div class="box">عقود آجلة وخيارات</div>
+      </div>
+    </section>
+
+    <section id="programs" class="section">
+      <h2>المسارات التعليمية</h2>
+      <div class="faculty-grid">
+        <div class="card">
+          <h3>المستوى التمهيدي</h3>
+          <p class="lead">تعلم الأساسيات: إدارة رأس المال، قراءة الشموع، مفاهيم التداول.</p>
+        </div>
+        <div class="card">
+          <h3>التحليل الفني والبرمجة</h3>
+          <p class="lead">استراتيجيات زمنية، مؤشرات، روبوتات تداول (MQL / Python).</p>
+        </div>
+        <div class="card">
+          <h3>التحليل الأساسي وإدارة المحافظ</h3>
+          <p class="lead">تحليل اقتصادي، تقارير مالية، ومحافظ متنوعة.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="lab" class="section">
+      <h2>مختبر المحاكاة الذكية</h2>
+      <p class="lead">جرب بيئة تداول تحاكي الأسواق العالمية مع تقييم أداء أسبوعي.</p>
+      <div class="card">
+        <ul>
+          <li>بيانات سوق حقيقية</li>
+          <li>تحليل آلي للأداء</li>
+          <li>مسابقات شهرية بين المتدربين</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="faculty" class="section">
+      <h2>الهيئة التعليمية</h2>
+      <div class="faculty-grid">
+        <div class="card"><strong>د. أحمد علي</strong><p class="lead">محلل اقتصادي وتقني</p></div>
+        <div class="card"><strong>مروة حسين</strong><p class="lead">مدربة فوركس واستراتيجيات</p></div>
+        <div class="card"><strong>Eng. Karim</strong><p class="lead">مبرمج خوارزميات تداول</p></div>
+      </div>
+    </section>
+
+    <section id="enroll" class="section">
+      <h2>انضم إلى كلية التداول</h2>
+      <div class="card">
+        <form style="display:flex;flex-direction:column;gap:12px">
+          <input placeholder="الاسم الكامل" style="padding:12px;border-radius:10px;border:none">
+          <input placeholder="البريد الإلكتروني" style="padding:12px;border-radius:10px;border:none">
+          <select style="padding:12px;border-radius:10px;border:none">
+            <option>اختر المسار</option>
+            <option>مستوى تمهيدي</option>
+            <option>تحليل فني وبرمجة</option>
+            <option>تحليل أساسي وإدارة محافظ</option>
+          </select>
+          <button type="button" class="btn">إرسال</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div>© 2050 Webseminar — Faculty of Trading</div>
+      <div>info@webseminar.trading • www.webseminar.trading</div>
+    </footer>
+  </div>
+</body>
+</html>
